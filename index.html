@@ -1,0 +1,2108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Five Star Taxation Services</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.98) 100%);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(252,211,77,0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+            position: relative;
+        }
+
+        nav::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50px;
+            right: -50px;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><pattern id="headerPattern" width="25" height="10" patternUnits="userSpaceOnUse"><circle cx="12.5" cy="5" r="0.5" fill="rgba(252,211,77,0.1)"/></pattern></defs><rect width="100" height="20" fill="url(%23headerPattern)"/></svg>');
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1e40af;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo svg {
+            height: 50px;
+            width: auto;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover svg {
+            filter: drop-shadow(0 6px 12px rgba(252,211,77,0.3));
+        }
+
+        /* Logo responsive design */
+        @media (max-width: 768px) {
+            .logo svg {
+                height: 40px;
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #1e40af;
+        }
+
+        .contact-btn {
+            background: #1e40af;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: #1d4ed8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="hexagon" width="50" height="43.4" patternUnits="userSpaceOnUse"><path d="M25,0 L50,14.43 L50,28.87 L25,43.3 L0,28.87 L0,14.43 Z" fill="none" stroke="rgba(252,211,77,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23hexagon)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #fcd34d, #f59e0b);
+            color: #1e293b;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(252, 211, 77, 0.3);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-stat {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fcd34d;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-stat-label {
+            font-size: 0.9rem;
+            color: #e2e8f0;
+            font-weight: 500;
+        }
+
+        .hero-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #fcd34d;
+        }
+
+        .hero-feature-icon {
+            background: linear-gradient(135deg, #fcd34d, #f59e0b);
+            color: #1e293b;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .hero-feature-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .hero-cta-section {
+            margin-top: 3rem;
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, #fcd34d, #f59e0b);
+            color: #1e293b;
+            padding: 1.2rem 3rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 25px rgba(252, 211, 77, 0.3);
+            margin-right: 1rem;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(252, 211, 77, 0.4);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #fcd34d;
+        }
+
+        .hero-guarantee {
+            background: rgba(252, 211, 77, 0.1);
+            border: 2px solid rgba(252, 211, 77, 0.3);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .guarantee-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .guarantee-text {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #fcd34d;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            background: white;
+            color: #1e40af;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(248, 250, 252, 0.9) 0%, rgba(241, 245, 249, 0.9) 100%), 
+                        url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            background-attachment: fixed;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #6b7280;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: #e0f2fe;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .service-card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 50%, #f8fafc 100%);
+            position: relative;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(30,64,175,0.1)"/></pattern></defs><rect width="60" height="60" fill="url(%23dots)"/></svg>');
+            opacity: 0.4;
+        }
+
+        .services-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .services-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: #60a5fa;
+        }
+
+        .service-header {
+            padding: 2rem 2rem 1rem;
+            position: relative;
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border: 3px solid #e0f2fe;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+        }
+
+        .service-visual {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+            margin: 1rem 0;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-visual::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="lines" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M0,20 L20,0" stroke="rgba(30,64,175,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23lines)"/></svg>');
+        }
+
+        .service-illustration {
+            font-size: 4rem;
+            color: #3b82f6;
+            z-index: 1;
+            position: relative;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #1e40af;
+            font-weight: 600;
+        }
+
+        .service-content {
+            padding: 0 2rem 2rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            background: #dcfce7;
+            color: #16a34a;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.8rem;
+            font-weight: bold;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .service-price {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+            text-align: center;
+            border: 2px solid #fcd34d;
+        }
+
+        .price-label {
+            font-size: 0.8rem;
+            color: #92400e;
+            font-weight: 600;
+        }
+
+        .price-value {
+            font-size: 1.3rem;
+            color: #1e40af;
+            font-weight: 700;
+        }
+
+        /* Special Discounts */
+        .discounts {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .discounts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .discount-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .discount-icon {
+            width: 80px;
+            height: 80px;
+            background: #dbeafe;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+            color: #1e40af;
+        }
+
+        /* Location Section */
+        .location {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(248, 250, 252, 0.95) 0%, rgba(241, 245, 249, 0.95) 100%), 
+                        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            text-align: center;
+        }
+
+        /* Location Section */
+        .location {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            text-align: center;
+        }
+
+        .location-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .australia-map {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 2rem;
+        }
+
+        .state-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .state-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #fcd34d, #f59e0b, #d97706);
+        }
+
+        .state-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            border-color: #60a5fa;
+        }
+
+        .state-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.8rem;
+            border: 3px solid #e0f2fe;
+        }
+
+        .state-card h3 {
+            font-size: 1.4rem;
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .state-card .state-name {
+            font-size: 1rem;
+            color: #6b7280;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .service-areas {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+
+        .service-areas h4 {
+            color: #374151;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .areas-list {
+            font-size: 0.8rem;
+            color: #6b7280;
+            line-height: 1.4;
+        }
+
+        .stats-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e40af;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .coverage-banner {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+
+        .coverage-banner h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .coverage-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .coverage-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .coverage-feature-icon {
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            padding: 0.5rem;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .australia-map {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 1rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Director's Promise */
+        .promise {
+            background: linear-gradient(135deg, rgba(31, 41, 55, 0.95) 0%, rgba(17, 24, 39, 0.95) 100%), 
+                        url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            background-attachment: fixed;
+            color: white;
+            padding: 80px 0;
+        }
+
+        /* Director's Promise */
+        .promise {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .promise::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .promise-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .promise-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .promise-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #fcd34d, #f59e0b);
+            color: #1e293b;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .promise-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .promise-text {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .promise h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .promise-points {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .promise-points li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            border-left: 4px solid #fcd34d;
+        }
+
+        .promise-icon {
+            background: linear-gradient(135deg, #fcd34d, #f59e0b);
+            color: #1e293b;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .director-profile {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .director-image {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            border: 4px solid #fcd34d;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .director-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #fcd34d;
+        }
+
+        .director-title {
+            font-size: 1rem;
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+        }
+
+        .director-credentials {
+            background: rgba(252, 211, 77, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            border: 1px solid rgba(252, 211, 77, 0.2);
+        }
+
+        .credentials-list {
+            font-size: 0.9rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .promise-cta {
+            background: linear-gradient(135deg, #fcd34d, #f59e0b);
+            color: #1e293b;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .promise-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(252, 211, 77, 0.3);
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: #fef3c7;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(248, 250, 252, 0.9) 0%, rgba(241, 245, 249, 0.9) 100%), 
+                        url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .stars {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Form Styles */
+        .contact-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .contact-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            color: #1e40af;
+            margin-bottom: 1rem;
+        }
+
+        .contact-subtitle {
+            font-size: 1.1rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-main {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .contact-form-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 2px solid rgba(252, 211, 77, 0.2);
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.875rem 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+            color: #374151;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-submit {
+            background: linear-gradient(135deg, #fcd34d, #f59e0b);
+            color: #1e293b;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(252, 211, 77, 0.3);
+        }
+
+        .contact-info-section {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .contact-info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 2px solid rgba(252, 211, 77, 0.2);
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            font-size: 1.2rem;
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-details p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .office-hours {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid #e2e8f0;
+        }
+
+        .hours-title {
+            color: #1e40af;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .hours-list {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .hours-item:last-child {
+            border-bottom: none;
+        }
+
+        .day {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .time {
+            color: #6b7280;
+        }
+
+        .footer-links {
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .footer-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-link-icon {
+            background: rgba(96, 165, 250, 0.2);
+            border-radius: 6px;
+            padding: 0.3rem;
+            font-size: 0.8rem;
+        }
+
+        .footer-link a {
+            transition: color 0.3s ease;
+        }
+
+        .footer-link a:hover {
+            color: #60a5fa;
+        }
+
+        @media (max-width: 968px) {
+            .contact-main {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .contact-form-section {
+                padding: 2rem;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #60a5fa;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .promise-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    
+.logo svg {
+    background: transparent !important;
+}
+</style>
+</head>
+<body>
+<!-- Header -->
+<header>
+<nav class="container">
+<div class="logo">
+<svg viewbox="0 0 450 140" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Enhanced golden gradient for stars -->
+<lineargradient id="starGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#fcd34d;stop-opacity:1"></stop>
+<stop offset="30%" style="stop-color:#f59e0b;stop-opacity:1"></stop>
+<stop offset="70%" style="stop-color:#d97706;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#b45309;stop-opacity:1"></stop>
+</lineargradient>
+<!-- Inner glow for stars -->
+<lineargradient id="starInner" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#fef3c7;stop-opacity:0.8"></stop>
+<stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0.3"></stop>
+</lineargradient>
+<!-- Text gradient -->
+<lineargradient id="textGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#3730a3;stop-opacity:1"></stop>
+</lineargradient>
+<!-- Enhanced shadow -->
+<filter height="200%" id="shadow" width="200%" x="-50%" y="-50%">
+<fedropshadow dx="0" dy="3" flood-color="#000000" flood-opacity="0.15" stddeviation="4"></fedropshadow>
+</filter>
+<!-- Glow effect for stars -->
+<filter height="200%" id="glow" width="200%" x="-50%" y="-50%">
+<fegaussianblur result="coloredBlur" stddeviation="2"></fegaussianblur>
+<femerge>
+<femergenode in="coloredBlur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<!-- Premium white background with subtle texture -->
+<!-- Decorative circular background element -->
+<circle cx="85" cy="45" fill="#f8fafc" opacity="0.5" r="55" stroke="#e2e8f0" stroke-width="1"></circle>
+<!-- Five premium stars with enhanced design -->
+<g filter="url(#glow)">
+<!-- Star 1 -->
+<g filter="url(#shadow)">
+<path d="M45 40 L48.5 49 L58 49 L51 55.5 L54.5 65 L45 58.5 L35.5 65 L39 55.5 L32 49 L41.5 49 Z" fill="url(#starGradient)" stroke="url(#starInner)" stroke-width="0.5"></path>
+<path d="M45 43 L47 48 L52 48 L48.5 51.5 L50.5 57 L45 53.5 L39.5 57 L41.5 51.5 L38 48 L43 48 Z" fill="url(#starInner)" opacity="0.6"></path>
+</g>
+<!-- Star 2 -->
+<g filter="url(#shadow)">
+<path d="M65 28 L68.5 37 L78 37 L71 43.5 L74.5 53 L65 46.5 L55.5 53 L59 43.5 L52 37 L61.5 37 Z" fill="url(#starGradient)" stroke="url(#starInner)" stroke-width="0.5"></path>
+<path d="M65 31 L67 36 L72 36 L68.5 39.5 L70.5 45 L65 41.5 L59.5 45 L61.5 39.5 L58 36 L63 36 Z" fill="url(#starInner)" opacity="0.6"></path>
+</g>
+<!-- Star 3 (center, largest and most prominent) -->
+<g filter="url(#shadow)">
+<path d="M85 20 L89.5 31 L101 31 L92.5 38.5 L97 50 L85 42.5 L73 50 L77.5 38.5 L69 31 L80.5 31 Z" fill="url(#starGradient)" stroke="url(#starInner)" stroke-width="0.5"></path>
+<path d="M85 24 L88 30 L95 30 L90 34.5 L93 41 L85 36.5 L77 41 L80 34.5 L75 30 L82 30 Z" fill="url(#starInner)" opacity="0.6"></path>
+</g>
+<!-- Star 4 -->
+<g filter="url(#shadow)">
+<path d="M105 28 L108.5 37 L118 37 L111 43.5 L114.5 53 L105 46.5 L95.5 53 L99 43.5 L92 37 L101.5 37 Z" fill="url(#starGradient)" stroke="url(#starInner)" stroke-width="0.5"></path>
+<path d="M105 31 L107 36 L112 36 L108.5 39.5 L110.5 45 L105 41.5 L99.5 45 L101.5 39.5 L98 36 L103 36 Z" fill="url(#starInner)" opacity="0.6"></path>
+</g>
+<!-- Star 5 -->
+<g filter="url(#shadow)">
+<path d="M125 40 L128.5 49 L138 49 L131 55.5 L134.5 65 L125 58.5 L115.5 65 L119 55.5 L112 49 L121.5 49 Z" fill="url(#starGradient)" stroke="url(#starInner)" stroke-width="0.5"></path>
+<path d="M125 43 L127 48 L132 48 L128.5 51.5 L130.5 57 L125 53.5 L119.5 57 L121.5 51.5 L118 48 L123 48 Z" fill="url(#starInner)" opacity="0.6"></path>
+</g>
+</g>
+<!-- Enhanced company name with premium typography -->
+<text fill="url(#textGradient)" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="-0.5px" x="180" y="50">Five Star</text>
+<text fill="#374151" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="26" font-weight="400" letter-spacing="2px" x="180" y="80">TAXATION</text>
+<!-- Premium decorative elements -->
+<line opacity="0.6" stroke="url(#starGradient)" stroke-width="3" x1="180" x2="380" y1="88" y2="88"></line>
+<circle cx="180" cy="88" fill="url(#starGradient)" r="2"></circle>
+<circle cx="380" cy="88" fill="url(#starGradient)" r="2"></circle>
+<!-- Professional tagline with enhanced styling -->
+<text fill="#6b7280" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="500" letter-spacing="2px" x="180" y="108">PROFESSIONAL TAX SERVICES</text>
+<!-- Subtle premium badge element -->
+<g transform="translate(380, 25)">
+<circle cx="0" cy="0" fill="none" opacity="0.4" r="12" stroke="url(#starGradient)" stroke-width="1.5"></circle>
+<text fill="url(#starGradient)" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-weight="600" text-anchor="middle" x="0" y="4">EST</text>
+</g>
+</svg>
+</div>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<a class="contact-btn" href="#contact">Contact Us</a>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="hero" id="home">
+<div class="container hero-container">
+<div class="hero-content">
+<span class="hero-badge">🏆 AUSTRALIA'S TRUSTED TAX EXPERTS</span>
+<h1>Maximize Your Tax Returns with Expert Guidance</h1>
+<p>At Five Star Taxation and Professional Tax Advice, we specialize in maximizing your tax returns and ensuring compliance for individuals and businesses. 19+ years of proven expertise in Australian taxation.</p>
+<!-- Hero Statistics -->
+<div class="hero-stats">
+<div class="hero-stat">
+<span class="hero-stat-number">$2.3M+</span>
+<span class="hero-stat-label">Tax Refunds Secured</span>
+</div>
+<div class="hero-stat">
+<span class="hero-stat-number">2000+</span>
+<span class="hero-stat-label">Happy Clients</span>
+</div>
+<div class="hero-stat">
+<span class="hero-stat-number">19+</span>
+<span class="hero-stat-label">Years Experience</span>
+</div>
+<div class="hero-stat">
+<span class="hero-stat-number">98%</span>
+<span class="hero-stat-label">Success Rate</span>
+</div>
+</div>
+<!-- Key Features -->
+<div class="hero-features">
+<div class="hero-feature">
+<div class="hero-feature-icon">⚡</div>
+<span class="hero-feature-text">Fast 48-Hour Processing</span>
+</div>
+<div class="hero-feature">
+<div class="hero-feature-icon">🛡️</div>
+<span class="hero-feature-text">100% ATO Compliant</span>
+</div>
+<div class="hero-feature">
+<div class="hero-feature-icon">💰</div>
+<span class="hero-feature-text">Maximum Refund Guarantee</span>
+</div>
+<div class="hero-feature">
+<div class="hero-feature-icon">📞</div>
+<span class="hero-feature-text">Year-Round Support</span>
+</div>
+</div>
+<!-- Call to Action -->
+<div class="hero-cta-section">
+<a class="cta-btn" href="#services">Get My Tax Return Started</a>
+<a class="cta-secondary" href="#contact">Free Consultation</a>
+</div>
+<!-- Guarantee Badge -->
+<div class="hero-guarantee">
+<div class="guarantee-icon">🏆</div>
+<div class="guarantee-text">Money-Back Guarantee | Licensed Tax Agents | Secure &amp; Confidential</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="services" id="services">
+<div class="container services-container">
+<div class="services-header">
+<span class="services-badge">PROFESSIONAL SERVICES</span>
+<h2 class="section-title">Our Services</h2>
+<p class="section-subtitle">Comprehensive tax and accounting services tailored to your needs</p>
+</div>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-header">
+<div class="service-icon">📊</div>
+<h3>Bookkeeping &amp; Financial Services</h3>
+<div class="service-visual"><img alt="Bookkeeping Services" src="assets/images/bookkeeping.jpg" style="width:100%; height:100%; object-fit:cover;"/></div>
+</div>
+<div class="service-content">
+<p>Professional bookkeeping services to keep your finances organized and compliant with ATO standards.</p>
+<ul class="service-features">
+<li>Monthly financial statements</li>
+<li>Bank reconciliation services</li>
+<li>Accounts payable/receivable</li>
+<li>GST/BAS preparation</li>
+<li>Cloud-based accounting setup</li>
+</ul>
+<div class="service-price">
+<div class="price-label">STARTING FROM</div>
+<div class="price-value">$150/month</div>
+</div>
+</div>
+</div>
+<div class="service-card">
+<div class="service-header">
+<div class="service-icon">💼</div>
+<h3>Business Accounting</h3>
+<div class="service-visual"><img alt="Business Accounting" src="assets/images/business-accounting.jpg" style="width:100%; height:100%; object-fit:cover;"/></div>
+</div>
+<div class="service-content">
+<p>Comprehensive accounting solutions for businesses of all sizes, from startups to established companies.</p>
+<ul class="service-features">
+<li>Annual financial statements</li>
+<li>Management reporting</li>
+<li>Budget planning &amp; forecasting</li>
+<li>Business structure advice</li>
+<li>Compliance management</li>
+</ul>
+<div class="service-price">
+<div class="price-label">STARTING FROM</div>
+<div class="price-value">$300/month</div>
+</div>
+</div>
+</div>
+<div class="service-card">
+<div class="service-header">
+<div class="service-icon">📋</div>
+<h3>Payroll Services</h3>
+<div class="service-visual"><img alt="Payroll Services" src="assets/images/payroll.jpg" style="width:100%; height:100%; object-fit:cover;"/></div>
+</div>
+<div class="service-content">
+<p>Efficient payroll processing and management services to ensure your employees are paid accurately and on time.</p>
+<ul class="service-features">
+<li>Weekly/fortnightly payroll processing</li>
+<li>Superannuation management</li>
+<li>PAYG withholding</li>
+<li>Leave calculations</li>
+<li>Payroll tax compliance</li>
+</ul>
+<div class="service-price">
+<div class="price-label">STARTING FROM</div>
+<div class="price-value">$25/employee</div>
+</div>
+</div>
+</div>
+<div class="service-card">
+<div class="service-header">
+<div class="service-icon">📈</div>
+<h3>Financial Consulting</h3>
+<div class="service-visual"><img alt="Financial Consulting" src="assets/images/financial-consulting.jpg" style="width:100%; height:100%; object-fit:cover;"/></div>
+</div>
+<div class="service-content">
+<p>Expert financial advice and consulting services to help you make informed business and personal financial decisions.</p>
+<ul class="service-features">
+<li>Financial planning strategies</li>
+<li>Investment advice</li>
+<li>Business growth planning</li>
+<li>Cash flow management</li>
+<li>Risk assessment</li>
+</ul>
+<div class="service-price">
+<div class="price-label">STARTING FROM</div>
+<div class="price-value">$200/hour</div>
+</div>
+</div>
+</div>
+<div class="service-card">
+<div class="service-header">
+<div class="service-icon">🧾</div>
+<h3>BAS &amp; GST Services</h3>
+<div class="service-visual"><img alt="BAS &amp; GST Services" src="assets/images/bas-gst.jpg" style="width:100%; height:100%; object-fit:cover;"/></div>
+</div>
+<div class="service-content">
+<p>Comprehensive Business Activity Statement (BAS) and Goods and Services Tax (GST) preparation and compliance services.</p>
+<ul class="service-features">
+<li>Monthly/quarterly BAS preparation</li>
+<li>GST registration and compliance</li>
+<li>Input tax credit optimization</li>
+<li>GST reconciliation services</li>
+<li>ATO correspondence handling</li>
+</ul>
+<div class="service-price">
+<div class="price-label">STARTING FROM</div>
+<div class="price-value">$120/quarter</div>
+</div>
+</div>
+</div>
+<div class="service-card">
+<div class="service-header">
+<div class="service-icon">💎</div>
+<h3>Tax Planning &amp; Advisory</h3>
+<div class="service-visual"><img alt="Tax Planning &amp; Advisory" src="assets/images/tax-planning.jpg" style="width:100%; height:100%; object-fit:cover;"/></div>
+</div>
+<div class="service-content">
+<p>Strategic tax planning and advisory services with transparent pricing and professional guidance.</p>
+<ul class="service-features">
+<li>Individual tax returns</li>
+<li>Tax minimization strategies</li>
+<li>Capital gains planning</li>
+<li>Retirement planning advice</li>
+<li>Annual tax health checks</li>
+</ul>
+<div class="service-price">
+<div class="price-label">STARTING FROM</div>
+<div class="price-value">$110/return</div>
+</div>
+</div>
+</div>
+<div class="service-card">
+<div class="service-header">
+<div class="service-icon">🏢</div>
+<h3>Company Tax Preparation</h3>
+<div class="service-visual"><img alt="Tax Planning &amp; Advisory" src="assets/images/tax-planning.jpg" style="width:100%; height:100%; object-fit:cover;"/></div>
+</div>
+<div class="service-content">
+<p>We prepare and lodge the company tax returns and help you lodge the TPAR (Taxable Payments Annual Report). We will send you notification when your tax return is due..</p>
+<div class="service-price">
+<div class="price-label">STARTING FROM</div>
+<div class="price-value">$100 to 300/return</div>
+</div>
+</div>
+</div>
+<div class="service-card">
+<div class="service-header">
+<div class="service-icon">🏠</div>
+<h3>Rental Properties</h3>
+<div class="service-visual"><img alt="Tax Planning &amp; Advisory" src="assets/images/rental-properties.jpg" style="width:100%; height:100%; object-fit:cover;"/></div>
+</div>
+<div class="service-content">
+<p>Contact us today and see how we can help you in maximizing your rental expenses. We keep you updated with the rental and taxation reforms.</p>
+<div class="service-price">
+<div class="price-label">STARTING FROM</div>
+<div class="price-value">$110/return</div>
+</div>
+</div>
+</div>
+<div class="service-card">
+<div class="service-header">
+<div class="service-icon">📄</div>
+<h3>Accountant Letter and Advice</h3>
+<div class="service-visual"><img alt="Tax Planning &amp; Advisory" src="assets/images/accountant-letter.jpg" style="width:100%; height:100%; object-fit:cover;"/></div>
+</div>
+<div class="service-content">
+<p>We can write a professional accountant letter for your business loan and needs. We can also provide you with the reference.</p>
+<div class="service-price">
+<div class="price-label">STARTING FROM</div>
+<div class="price-value">$350 per Letter</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Special Discounts -->
+<section class="discounts">
+<div class="container">
+<h2 class="section-title">Special Discounts</h2>
+<p class="section-subtitle">We offer discounts based on various criteria for our registered customers</p>
+<div class="discounts-grid">
+<div class="discount-card">
+<div class="discount-icon">🎓</div>
+<h3>Students</h3>
+<p>Special discounts available for students</p>
+</div>
+<div class="discount-card">
+<div class="discount-icon">👥</div>
+<h3>Low Income Individuals/Families</h3>
+<p>Support for low income individuals and families</p>
+</div>
+<div class="discount-card">
+<div class="discount-icon">⭐</div>
+<h3>Seniors</h3>
+<p>Senior citizen discounts on our services</p>
+</div>
+<div class="discount-card">
+<div class="discount-icon">🏢</div>
+<h3>Veteran &amp; Financial Services</h3>
+<p>Special rates for Veteran and financial service clients</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Location -->
+<section class="location">
+<div class="container">
+<div class="location-content">
+<h2 class="section-title">Our Reach Across Australia</h2>
+<p class="section-subtitle">Serving clients nationwide with expert tax and accounting services in major cities and regional areas</p>
+<!-- Australia Coverage Map -->
+<div class="australia-map">
+<!-- Major Cities Row 1 -->
+<div class="state-card">
+<div class="state-icon">🏙️</div>
+<h3>Sydney</h3>
+<p class="state-name">New South Wales</p>
+<div class="service-areas">
+<h4>Service :</h4>
+<p class="areas-list">In office or Online via Phone call or zoom meeting</p>
+</div>
+</div>
+<div class="state-card">
+<div class="state-icon">☕</div>
+<h3>Melbourne</h3>
+<p class="state-name">Victoria</p>
+<div class="service-areas">
+<h4>Service :</h4>
+<p class="areas-list">Online via Phone call or zoom meeting</p>
+</div>
+</div>
+<div class="state-card">
+<div class="state-icon">🌴</div>
+<h3>Brisbane</h3>
+<p class="state-name">Queensland</p>
+<div class="service-areas">
+<h4>Service :</h4>
+<p class="areas-list">Online via Phone call or zoom meeting</p>
+</div>
+</div>
+<!-- Major Cities Row 2 -->
+<div class="state-card">
+<div class="state-icon">🏖️</div>
+<h3>Perth</h3>
+<p class="state-name">Western Australia</p>
+<div class="service-areas">
+<h4>Service :</h4>
+<p class="areas-list">Online via Phone call or zoom meeting</p>
+</div>
+</div>
+<div class="state-card">
+<div class="state-icon">🍷</div>
+<h3>Adelaide</h3>
+<p class="state-name">South Australia</p>
+<div class="service-areas">
+<h4>Service :</h4>
+<p class="areas-list">Online via Phone call or zoom meeting</p>
+</div>
+</div>
+<div class="state-card">
+<div class="state-icon">🏛️</div>
+<h3>Canberra</h3>
+<p class="state-name">Australian Capital Territory</p>
+<div class="service-areas">
+<h4>Service :</h4>
+<p class="areas-list">Online via Phone call or zoom meeting</p>
+</div>
+</div>
+</div>
+<!-- Statistics Section -->
+<div class="stats-section">
+<h3 style="color: #1e40af; font-size: 1.8rem; margin-bottom: 1rem;">Nationwide Service Statistics</h3>
+<div class="stats-grid">
+<div class="stat-item">
+<span class="stat-number">8</span>
+<p class="stat-label">Major Cities Covered</p>
+</div>
+<div class="stat-item">
+<span class="stat-number">50+</span>
+<p class="stat-label">Service Areas</p>
+</div>
+<div class="stat-item">
+<span class="stat-number">2000+</span>
+<p class="stat-label">Clients Served</p>
+</div>
+<div class="stat-item">
+<span class="stat-number">19+</span>
+<p class="stat-label">Years Experience</p>
+</div>
+</div>
+</div>
+<!-- Coverage Banner -->
+<div class="coverage-banner">
+<h3>Help with Loan Documents</h3>
+<p>We help tailor your documents for home, car, and personal loans.Our team ensures your paperwork meets lender requirements. Save time and avoid delays with professionally prepared files. Get expert support for a smoother loan approval process</p>
+<div class="coverage-features">
+<div class="coverage-feature">
+<span class="coverage-feature-icon">✈️</span>
+<span>Home Loan</span>
+</div>
+<div class="coverage-feature">
+<span class="coverage-feature-icon">🏢</span>
+<span>Car Loan </span>
+</div>
+<div class="coverage-feature">
+<span class="coverage-feature-icon">📱</span>
+<span>Personal loan</span>
+</div>
+<div class="coverage-feature">
+<span class="coverage-feature-icon">🚀</span>
+<span>Business Loan</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Director's Promise -->
+<section class="promise">
+<div class="container promise-container">
+<div class="promise-header">
+<span class="promise-badge">DIRECTOR'S COMMITMENT</span>
+<h2>Our Path to Maximum Returns Starts Here</h2>
+</div>
+<div class="promise-content">
+<div class="promise-text">
+<h3 style="color: #fcd34d; font-size: 1.5rem; margin-bottom: 1.5rem;">My Personal Guarantee to You</h3>
+<ul class="promise-points">
+<li>
+<div class="promise-icon">🎯</div>
+<div>
+<strong>Personalized Service:</strong> Every client receives individual attention and customized tax strategies tailored to their unique financial situation.
+                            </div>
+</li>
+<li>
+<div class="promise-icon">⚡</div>
+<div>
+<strong>Maximum Returns:</strong> With 19+ years of experience, we ensure you receive every deduction and credit you're legally entitled to.
+                            </div>
+</li>
+<li>
+<div class="promise-icon">🛡️</div>
+<div>
+<strong>Full Compliance:</strong> Stay completely compliant with ATO regulations while optimizing your tax position for maximum benefit.
+                            </div>
+</li>
+<li>
+<div class="promise-icon">🤝</div>
+<div>
+<strong>Ongoing Support:</strong> We're not just here for tax season - we provide year-round financial guidance and support.
+                            </div>
+</li>
+</ul>
+<p style="font-style: italic; opacity: 0.9; margin-top: 2rem;">
+                        "Building lasting relationships with our clients means going beyond just filing returns - it's about securing your financial future."
+                    </p>
+<a class="promise-cta" href="#contact">Schedule Your Consultation</a>
+</div>
+<div class="director-profile">
+<h4 class="director-name">Raman Singh</h4>
+<p class="director-title">Director &amp; Principal Tax Agent</p>
+<div class="director-credentials">
+<h5 style="color: #fcd34d; margin-bottom: 0.5rem;">Professional Credentials:</h5>
+<div class="credentials-list">
+                            • Certified Tax Agent<br/>
+                            • Master in Accounting<br/>
+                            • Member of Tax Practitioners <br/>
+                            • 19+ Years Industry Experience<br/>
+                            • Specialist in Business &amp; Individual Tax
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tax-calendar-resources" style="padding: 3rem 1rem; background-color: #f9f9f9;">
+<div class="container">
+<h2 style="text-align: center; margin-bottom: 2rem;">Tax Season Calendar &amp; Resources</h2>
+<p style="text-align: center; max-width: 700px; margin: 0 auto 2rem;">Stay ahead of important dates and access helpful tax resources</p>
+<div class="calendar-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+<div class="calendar-card" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+<h3>🗓️ July 1</h3>
+<p><strong>New Financial Year Begins</strong></p>
+<p>Start organizing receipts and documents for the new tax year</p>
+</div>
+<div class="calendar-card" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+<h3>📊 Oct 31</h3>
+<p><strong>Individual Tax Returns Due</strong></p>
+<p>Deadline for individual tax returns (if lodging yourself)</p>
+</div>
+<div class="calendar-card" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+<h3>⏰ May 15</h3>
+<p><strong>Agent Lodgment Deadline</strong></p>
+<p>Extended deadline when using a registered tax agent</p>
+</div>
+<div class="calendar-card" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+<h3>💼 Dec 31</h3>
+<p><strong>Business Activity Statements</strong></p>
+<p>Quarterly BAS statements due for businesses</p>
+</div>
+</div>
+<h3 style="text-align: center; margin-bottom: 1.5rem;">Essential Tax Resources</h3>
+<div class="resources-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+<div class="resource-card" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+<h4>📋 Tax Checklist</h4>
+<p>Complete checklist of documents needed for your tax return</p>
+<ul><li>Income statements</li><li>Deduction receipts</li><li>Bank statements</li><li>Investment records</li></ul>
+</div>
+<div class="resource-card" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+<h4>💰 Deduction Calculator</h4>
+<p>Estimate your potential deductions and tax savings</p>
+<ul><li>Work expenses</li><li>Vehicle costs</li><li>Home office</li><li>Investment deductions</li></ul>
+</div>
+<div class="resource-card" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+<h4>📚 Tax Guides</h4>
+<p>Comprehensive guides for different tax situations</p>
+<ul><li>First-time filers</li><li>Small business owners</li><li>Property investors</li><li>Retirees</li></ul>
+</div>
+<div class="resource-card" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+<h4>🔔 Tax Updates</h4>
+<p>Stay informed about the latest tax law changes</p>
+<ul><li>Rate changes</li><li>New deductions</li><li>Policy updates</li><li>ATO announcements</li></ul>
+</div>
+</div>
+
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="why-choose">
+<div class="container">
+<h2 class="section-title">Why Choose Five Star Taxation Services?</h2>
+<p class="section-subtitle">Excellence, trust and results - based on over 9 years of experience</p>
+<div class="features-grid">
+<div class="feature-card">
+<div class="feature-icon">⏰</div>
+<h3>19+ Years Experience</h3>
+<p>Extensive experience in taxation and accounting services</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">🎯</div>
+<h3>Personalized Service</h3>
+<p>Tailored solutions for your unique tax situation</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">✅</div>
+<h3>ATO Compliance</h3>
+<p>Fully compliant with all ATO regulations and requirements</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">📞</div>
+<h3>Year-Round Support</h3>
+<p>Ongoing support and advice throughout the year</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="testimonials">
+<div class="container">
+<h2 class="section-title">What Our Clients Say</h2>
+<div class="testimonials-grid">
+<div class="testimonial-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>"Excellent service! They helped maximize my tax return and made the whole process stress-free. Highly recommended!"</p>
+<strong>- Sarah Johnson</strong>
+</div>
+<div class="testimonial-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>"Professional and knowledgeable team. They saved me time and money with their expert advice."</p>
+<strong>- Michael Chen</strong>
+</div>
+<div class="testimonial-card">
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>"Five Star Taxation has been handling my business accounts for years. Outstanding service every time!"</p>
+<strong>- Emma Wilson</strong>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer id="contact">
+<div class="container footer-container">
+<!-- Contact Header -->
+<div class="contact-header">
+<span class="contact-badge">GET IN TOUCH</span>
+<h2 class="contact-title">Ready to Maximize Your Tax Returns?</h2>
+<p class="contact-subtitle">Contact us today for a free consultation and discover how much you could save</p>
+</div>
+<!-- Main Contact Section -->
+<div class="contact-main">
+<div class="contact-form-section">
+<h3 style="color: blue; margin-bottom: 1.5rem; font-size: 1.4rem;">Free Tax Assessment</h3>
+<form class="contact-form">
+<div class="form-group">
+<label for="name">Full Name</label>
+<input id="name" placeholder="Enter your full name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="email">Email Address</label>
+<input id="email" placeholder="Enter your email address" required="" type="email"/>
+</div>
+<div class="form-group">
+<label for="phone">Phone Number</label>
+<input id="phone" placeholder="Enter your phone number" type="tel"/>
+</div>
+<div class="form-group">
+<label for="service">Service Required</label>
+<select id="service" required="">
+<option value="">Select a service</option>
+<option value="individual">Individual Tax Return</option>
+<option value="business">Business Tax Services</option>
+<option value="bookkeeping">Bookkeeping Services</option>
+<option value="payroll">Payroll Services</option>
+<option value="consulting">Financial Consulting</option>
+<option value="bas">BAS &amp; GST Services</option>
+</select>
+</div>
+<div class="form-group">
+<label for="message">Additional Details</label>
+<textarea id="message" placeholder="Tell us about your tax situation or any specific requirements" rows="4"></textarea>
+</div>
+<button class="form-submit" type="submit">Get Free Assessment</button>
+</form>
+</div>
+<div class="contact-info-section">
+<div class="contact-info-card">
+<div class="contact-method">
+<div class="contact-icon">📧</div>
+<div class="contact-details">
+<h4>Email Us</h4>
+<p>raman@taxnpayroll.org</p></div>
+</div>
+</div>
+<div class="contact-info-card">
+<div class="contact-method">
+<div class="contact-icon">📱</div>
+<div class="contact-details">
+<h4>Call Us</h4>
+<p>Ph. 0430203460</p></div>
+</div>
+</div>
+<div class="contact-info-card">
+<div class="contact-method">
+<div class="contact-icon">🏢</div>
+<div class="contact-details">
+<h4>Visit Our Office</h4>
+<p>Unit 64/25 N Rocks Rd, North Rocks NSW 2151</p></div>
+</div>
+</div>
+<div class="office-hours">
+<h4 class="hours-title">📅 Office Hours</h4>
+<div class="hours-list">
+<div class="hours-item">
+<span class="day">Monday - Friday</span>
+<span class="time">9:00 AM - 6:00 PM</span>
+</div>
+<div class="hours-item">
+<span class="day">Saturday</span>
+<span class="time">9:00 AM - 2:00 PM</span>
+</div>
+<div class="hours-item">
+<span class="day">Sunday</span>
+<span class="time">Closed</span>
+</div>
+<div class="hours-item">
+<span class="day">Public Holidays</span>
+<span class="time">By Appointment</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Links -->
+<div class="footer-content">
+<div class="footer-section">
+<h3>🌟 About Five Star Taxation</h3>
+<p>Your trusted partner for tax and accounting services across Australia. With 19+ years of experience, we're committed to maximizing your returns and ensuring full ATO compliance.</p>
+<div style="margin-top: 1.5rem;">
+<div style="color: #fcd34d; font-weight: 600;">🏆 Licensed Tax Agent</div>
+<div style="color: #fcd34d; font-weight: 600;">🛡️ Fully Insured &amp; Bonded</div>
+</div>
+</div>
+<div class="footer-section">
+<h3>💼 Our Services</h3>
+<div class="footer-links">
+<div class="footer-link">
+<div class="footer-link-icon">📊</div>
+<a href="#services">Individual Tax Returns</a>
+</div>
+<div class="footer-link">
+<div class="footer-link-icon">🏢</div>
+<a href="#services">Business Tax Services</a>
+</div>
+<div class="footer-link">
+<div class="footer-link-icon">📋</div>
+<a href="#services">Bookkeeping Services</a>
+</div>
+<div class="footer-link">
+<div class="footer-link-icon">💰</div>
+<a href="#services">Payroll Management</a>
+</div>
+<div class="footer-link">
+<div class="footer-link-icon">📈</div>
+<a href="#services">Financial Consulting</a>
+</div>
+</div>
+</div>
+<div class="footer-section">
+<h3>🔗 Quick Links</h3>
+<div class="footer-links">
+<div class="footer-link">
+<div class="footer-link-icon">🏠</div>
+<a href="#home">Home</a>
+</div>
+<div class="footer-link">
+<div class="footer-link-icon">ℹ️</div>
+<a href="#about">About Us</a>
+</div>
+<div class="footer-link">
+<div class="footer-link-icon">💎</div>
+<a href="#discounts">Special Discounts</a>
+</div>
+<div class="footer-link">
+<div class="footer-link-icon">📞</div>
+<a href="#contact">Contact Us</a>
+</div>
+<div class="footer-link">
+<div class="footer-link-icon">🔒</div>
+<a href="#privacy">Privacy Policy</a>
+</div>
+</div>
+</div>
+<div class="footer-section">
+<h3>🎯 Why Choose Us</h3>
+<div style="display: grid; gap: 1rem;">
+<div style="display: flex; align-items: center; gap: 0.8rem;">
+<span style="background: #dcfce7; color: #16a34a; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;">✓</span>
+<span>Maximum refund guarantee</span>
+</div>
+<div style="display: flex; align-items: center; gap: 0.8rem;">
+<span style="background: #dcfce7; color: #16a34a; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;">✓</span>
+<span>19+ years of expertise</span>
+</div>
+<div style="display: flex; align-items: center; gap: 0.8rem;">
+<span style="background: #dcfce7; color: #16a34a; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;">✓</span>
+<span>100% ATO compliance</span>
+</div>
+<div style="display: flex; align-items: center; gap: 0.8rem;">
+<span style="background: #dcfce7; color: #16a34a; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;">✓</span>
+<span>Nationwide coverage</span>
+</div>
+<div style="display: flex; align-items: center; gap: 0.8rem;">
+<span style="background: #dcfce7; color: #16a34a; border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;">✓</span>
+<span>Secure &amp; confidential</span>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2024 Five Star Taxation Services. All rights reserved.</p>
+<p style="margin-top: 10px; font-size: 0.9rem; color: #6b7280;">
+                    Designed by <a href="mailto:gagandeep@engineer.com" style="color: #60a5fa; text-decoration: none;">Gagandeep Singh</a> | 
+                    <a href="mailto:gagandeep@engineer.com" style="color: #60a5fa; text-decoration: none;">gagandeep@engineer.com</a>
+</p>
+</div>
+</div>
+</footer>
+</body>
+</html>
